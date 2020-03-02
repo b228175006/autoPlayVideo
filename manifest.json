@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "自动播放视频", 
+    "version": "1.0", 
+    "description": "自动点击奥鹏课程的下一节按钮",
+    "browser_action" : { 
+    "default_icon": "img/icon.png",
+    
+    "default_title": "自动播放视频",
+    
+    "default_popup": "autoNext.html"
+},
+
+"permissions": [
+    "https://*/",
+    "http://*/",
+    "bookmarks",
+    "tabs",
+    "history",
+    "storage",
+    "webRequestBlocking",
+    "webRequest",
+    "notifications",
+    "contextMenus"
+],
+
+
+"content_scripts": [{
+    "all_frames":true,
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["js/autoNext.js","js/jquery1.9.1.js"],
+
+    "run_at": "document_end"
+}]
+}
