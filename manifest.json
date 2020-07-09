@@ -5,7 +5,8 @@
     "description": "自动点击奥鹏课程的下一节按钮",
     "page_action": {
         "default_icon": "img/icon.png",
-        "default_title": "自动播放视频"
+        "default_title": "自动播放视频",
+        "default_popup":"html/default.html"
     },
     "permissions": [
         "https://learn.open.com.cn/",
